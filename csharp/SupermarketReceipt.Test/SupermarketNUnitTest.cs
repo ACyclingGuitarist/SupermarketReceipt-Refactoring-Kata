@@ -17,7 +17,7 @@ namespace SupermarketReceipt.Test
             catalog.AddProduct(apples, 1.99);
 
             var cart = new ShoppingCart();
-            cart.AddItemQuantity(apples, 2.5);
+            cart.AddItem(apples, 2.5);
 
             var teller = new Teller(catalog);
             teller.AddSpecialOffer(SpecialOfferType.TenPercentDiscount, toothbrush, 10.0);

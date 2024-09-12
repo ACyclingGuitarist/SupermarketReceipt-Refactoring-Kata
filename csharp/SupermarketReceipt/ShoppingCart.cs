@@ -15,13 +15,12 @@ namespace SupermarketReceipt
             return new List<ProductQuantity>(_items);
         }
 
-        public void AddItem(Product product)
+        public void AddItem(Product product, double quantity = 1.0)
         {
-            AddItemQuantity(product, 1.0);
+            AddItemQuantity(product, quantity);
         }
 
-
-        public void AddItemQuantity(Product product, double quantity)
+        private void AddItemQuantity(Product product, double quantity)
         {
             _items.Add(new ProductQuantity(product, quantity));
             if (_productQuantities.ContainsKey(product))
